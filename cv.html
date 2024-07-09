@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dennis Seroney - CV</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Commit+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Commit Mono', monospace;
+        }
+        .skill-bar {
+            height: 10px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .skill-level {
+            height: 100%;
+            background-color: #000;
+        }
+        @media print {
+            .no-print {
+                display: none;
+            }
+            body {
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-8">
+    <div class="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+        <div class="bg-black text-white p-6">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h1 class="text-3xl font-bold">Dennis Seroney</h1>
+                    <p class="text-xl">Researcher & Financial/Data Analyst</p>
+                </div>
+                <img src="images/passport.jpg" alt="Dennis Seroney" class="w-32 h-32 rounded-full object-cover border-4 border-white">
+            </div>
+        </div>
+        
+        <div class="p-6">
+            <section class="mb-6">
+                <h2 class="text-2xl font-bold mb-2">Professional Summary</h2>
+                <p class="text-lg">Dedicated financial and data analyst with over 4 years of experience in diverse roles across finance, internal audit, and data analysis. Currently pursuing a Master's in Business Analytics, combining academic knowledge with practical experience to deliver insightful financial and operational analyses. Proficient in Python, SQL, and advanced Microsoft Office tools, with a strong background in supply chain analytics and internal auditing.</p>
+            </section>
+            
+            <section class="mb-6">
+                <h2 class="text-2xl font-bold mb-2">Education</h2>
+                <div class="mb-4">
+                    <h3 class="text-xl font-semibold">Master of Business Analytics</h3>
+                    <p>Edith Cowan University - Perth, Australia</p>
+                    <p>2023 - Present</p>
+                    <li> Focusing on Supply Chain Analytics, network design planning, demand forecasting, and Big Data & AI applications in business</li>
+                    <li> Focusing on Business Process Modelling using visio to create ERD diagrams, Business Process Modeling using BPMN 2.0, Process Discovery and Analysis & Process Redesign</li>
+                    <li>Focusing on Systems Analysis and Design, I delved into topics including; Systems Analysis Activities, System  Development Life Cycle, Domain Modelling & Use Case Modelling</li>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold">BCom - Finance</h3>
+                    <p>The Catholic University of Eastern Africa - Nairobi</p>
+                    <p>Class of 2018</p>
+                    <p class="italic">I majored in Finance and the topics learned include, Pubic Sector Accounting, Corporate Finance, Portfolio Management, and Advanced Decision Making, Quantitative Methods, Real Estate Finance & Advanced Financial Management</p>
+                </div>
+            </section>
+            
+            <section class="mb-6">
+                <h2 class="text-2xl font-bold mb-2">Professional Experience</h2>
+                <div class="mb-4">
+                    <h3 class="text-xl font-semibold">Internal Audit Assistant</h3>
+                    <p>Youth Enterprise Development Fund | 2019 - 2023</p>
+                    <ul class="list-disc pl-5">
+                        <li>Conducted comprehensive desk reviews and field audits across all departments, enhancing operational efficiency.</li>
+                        <li>Spearheaded data collection, analysis, and reporting initiatives, leading to a improvement in decision-making processes.</li>
+                        <li>Evaluated and optimized internal controls, resulting in a reduction in compliance issues.</li>
+                        <li>Led ad-hoc audits as requested by the Board, uncovering critical insights for the organization.</li>
+                        <li>Key member of the taskforce that formulated the procurement policy, streamlining processes.</li>
+                    </ul>
+                </div>
+                <div class="mb-4">
+                    <h3 class="text-xl font-semibold">Finance Intern</h3>
+                    <p>Youth Enterprise Development Fund | 2018 - 2019</p>
+                    <ul class="list-disc pl-5">
+                        <li>Member of the Accounts Payable and Accounts Receivables team's</li>
+                        <li>Helped in Bank reconciliation processes and liason with the cash office .</li>
+                        <li>Assisted in preparing quarterly and annual financial reports.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold">Industrial Attachment</h3>
+                    <p>The National Treasury HQ, Nairobi, Kenya | 2017 (3 months)</p>
+                    <ul class="list-disc pl-5">
+                        <li>Rotated through key financial units, gaining comprehensive exposure to government financial operations.</li>
+                        <li>Contributed to process improvements in voucher preparation and validation.</li>
+                        <li>Assisted in bank reconciliation processes, helping to identify and resolve discrepancies within departmental units.</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section class="mb-6">
+                <h2 class="text-2xl font-bold mb-2">Key Skills</h2>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Technical Skills</h3>
+                        <div class="mb-2">
+                            <span class="font-semibold">Financial Analysis</span>
+                            <div class="skill-bar"><div class="skill-level" style="width: 95%;"></div></div>
+                        </div>
+                        <div class="mb-2">
+                            <span class="font-semibold">Data Analysis (Python)</span>
+                            <div class="skill-bar"><div class="skill-level" style="width: 90%;"></div></div>
+                        </div>
+                        <div class="mb-2">
+                            <span class="font-semibold">Microsoft 365 Suite</span>
+                            <div class="skill-bar"><div class="skill-level" style="width: 95%;"></div></div>
+                        </div>
+                        <div class="mb-2">
+                            <span class="font-semibold">SQL for Finance</span>
+                            <div class="skill-bar"><div class="skill-level" style="width: 85%;"></div></div>
+                        </div>
+                        <div class="mb-2">
+                            <span class="font-semibold">Data Visualization</span>
+                            <div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div>
+                        </div>
+                        <div class="mb-2">
+                            <span class="font-semibold">Data Analysis</span>
+                            <div class="skill-bar"><div class="skill-level" style="width: 75%;"></div></div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Soft Skills</h3>
+                        <ul class="list-disc pl-5">
+                            <li>Advanced research and analysis capabilities</li>
+                            <li>Stakeholder Engagement</li>
+                            <li>Exceptional report writing and presentation skills</li>
+                            <li>Strong problem-solving and critical thinking abilities</li>
+                            <li>Excellent verbal and written communication</li>
+                            <li>Proven teamwork and collaboration expertise</li>
+                            <li>High adaptability to new technologies and methodologies</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="mb-6">
+                <h2 class="text-2xl font-bold mb-2">Certifications & Professional Development</h2>
+                <ul class="list-disc pl-5">
+                    <li>Audit Committee Training, Kenya School of Government (2020 & 2021)</li>
+                    <li>SQL for Finance Professionals, LinkedIn Learning (2023)</li>
+                    <li>Supply Chain Foundations: Analytics, LinkedIn Learning (2023)</li>
+                </ul>
+            </section>
+            
+            <li>
+                <a href="financial-analysis-project.html" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 hover:underline">
+                    Developed a Financial Analysis report and Application on the top 5 tech companies
+                </a>
+                <p class="text-sm text-gray-600 mt-1">An interactive dashboard showcasing financial metrics and trends for leading tech giants.</p>
+            </li>
+            <li>
+                <a href="https://europebig5.streamlit.app" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 hover:underline">
+                    Created a comprehensive Soccer Analytics Dashboard of the Big 5 leagues in Europe
+                </a>
+                <p class="text-sm text-gray-600 mt-1">A dynamic visualization of performance statistics for top European football leagues.</p>
+            </li>
+                    <li>Taskforce Member in developing The Finance Policy and procurement policy of Youth Enterprise Development Fund</li>
+                </ul>
+            </section>
+            
+            <section>
+                <h2 class="text-2xl font-bold mb-2">Contact & Professional Profiles</h2>
+                <p>Email: denniskiplagat16@gmail.com</p>
+                <p>Phone: +61 435 199885</p>
+                <div class="flex space-x-4 mt-2">
+                    <a href="https://www.linkedin.com/in/denniskiplagatseroney/" target="_blank" rel="noopener noreferrer" class="text-blue-700 hover:text-blue-900">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com/analyticsKE" target="_blank" rel="noopener noreferrer" class="text-gray-800 hover:text-black">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://medium.com/@deltaanalyticske" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:text-green-800">
+                        <i class="fab fa-medium"></i> Medium
+                    </a>
+                    <a href="https://analytics.github.io" target="_blank" rel="noopener noreferrer" class="text-gray-800 hover:text-black">
+                        <i class="fab fa-medium"></i> Website
+                    </a>
+                </div>
+            </section>
+        </div>
+    </div>
+    
+    <div class="mt-8 text-center no-print">
+        <button onclick="window.print()" class="bg-black text-white px-6 py-2 rounded hover:bg-gray-800 transition duration-300">Download as PDF</button>
+    </div>
+
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js"></script>
+</body>
+</html>
