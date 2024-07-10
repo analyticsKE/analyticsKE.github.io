@@ -14,8 +14,23 @@
 			.custom-shadow {
 				box-shadow: 5px 5px 0px 0px rgba(0,0,0,1);
 			}
+			.animate-background {
+				background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+				background-size: 400% 400%;
+				animation: gradient 15s ease infinite;
+			}
+			@keyframes gradient {
+				0% {
+					background-position: 0% 50%;
+				}
+				50% {
+					background-position: 100% 50%;
+				}
+				100% {
+					background-position: 0% 50%;
+				}
+			}
 		</style>
-	<head>
 		<!-- Add Font Awesome for icons -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 	</head>
@@ -33,7 +48,7 @@
 					</div>
 					<nav class="w-full md:w-auto">
 						<ul class="flex flex-wrap justify-center md:justify-end space-x-4 mb-4 md:mb-0">
-							<li><a href="#top" class="hover:text-gray-300">Intro</a></li>
+							<li><a href="cv.html" class="hover:text-gray-300">CV</a></li>
 							<li><a href="#portfolio" class="hover:text-gray-300">Portfolio</a></li>
 							<li><a href="#articles" class="hover:text-gray-300">Articles</a></li>
 							<li><a href="#about" class="hover:text-gray-300">About Me</a></li>
@@ -52,7 +67,6 @@
 							<a href="mailto:deltaanalytics@gmail.com" class="text-white hover:text-gray-300" aria-label="Email">
 								<i class="fas fa-envelope"></i>
 							</a>
-							<!-- Add the new CV link here -->
 							<a href="cv.html" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-300" aria-label="View CV">
 								<i class="fas fa-file-alt"></i>
 							</a>
@@ -63,8 +77,8 @@
 		</header>
 		<!-- Main Content -->
 		<main class="pt-24">
-			<!-- Intro Section -->
-			<section id="top" class="bg-black text-white py-20">
+			<!-- Intro Section with Animation -->
+			<section id="top" class="animate-background text-white py-20">
 				<div class="container mx-auto text-center">
 					<h2 class="text-4xl font-bold mb-4">Welcome to My Portfolio</h2>
 					<p class="text-xl mb-8">I'm <strong>Dennis Seroney</strong>, a researcher and analyst specializing in Finance, Sports, and Technology.</p>
@@ -72,141 +86,130 @@
 				</div>
 			</section>
 
-						<!-- Portfolio Section -->
-		<section id="portfolio" class="py-20">
-			<div class="container mx-auto">
-				<h2 class="text-3xl font-bold mb-8 text-center">Portfolio</h2>
-				<p class="text-center mb-12">I have experience working in Finance, Internal Audit, and Accounting departments.</p>
-				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-					<!-- Portfolio Item 1 -->
-					<div class="bg-white border-2 border-black custom-shadow">
-						<img src="images/fs_dashboard.png" alt="Financial Analysis Project" class="w-full h-48 object-cover">
-						<div class="p-4">
-							<h3 class="font-bold mb-2">Financial Analysis Project</h3>
-							<p class="text-gray-700 mb-4">Conducted an in-depth analysis of company financials, providing insights for strategic decision-making.</p>
-							<a href="financial-analysis-project.html" class="text-black font-bold hover:underline">View Report →</a>
+			<!-- Portfolio Section -->
+			<section id="portfolio" class="py-20">
+				<div class="container mx-auto">
+					<h2 class="text-3xl font-bold mb-8 text-center">Portfolio</h2>
+					<p class="text-center mb-12">My professional experience encompasses roles in Finance, Internal Audit, and Accounting departments.</p>
+					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+						<!-- Portfolio Item 1 -->
+						<div class="bg-white border-2 border-black custom-shadow">
+							<img src="images/fs_dashboard.png" alt="Financial Analysis Project" class="w-full h-48 object-cover">
+							<div class="p-4">
+								<h3 class="font-bold mb-2">Financial Analysis Project</h3>
+								<p class="text-gray-700 mb-4">Conducted a comprehensive analysis of company financials, providing strategic insights for decision-making.</p>
+								<a href="financial-analysis-project.html" class="text-black font-bold hover:underline">View Report →</a>
+							</div>
 						</div>
-					</div>
-					<!-- Portfolio Item 2 -->
-					<div class="bg-white border-2 border-black custom-shadow">
-						<img src="images/soccerdash.png" alt="Soccer Analytics Dashboard" class="w-full h-48 object-cover">
-						<div class="p-4">
-							<h3 class="font-bold mb-2">Sports Analytics Dashboard</h3>
-							<p class="text-gray-700">Developed a comprehensive dashboard for the Big 5 leagues in Europe for evaluating performance analysis.</p>
-							<a href="https://europebig5.streamlit.app/" class="text-black font-bold hover:underline">View App →</a>
+						<!-- Portfolio Item 2 -->
+						<div class="bg-white border-2 border-black custom-shadow">
+							<img src="images/soccerdash.png" alt="Soccer Analytics Dashboard" class="w-full h-48 object-cover">
+							<div class="p-4">
+								<h3 class="font-bold mb-2">Sports Analytics Dashboard</h3>
+								<p class="text-gray-700">Developed an advanced dashboard for performance analysis of the top 5 European soccer leagues.</p>
+								<a href="https://europebig5.streamlit.app/" class="text-black font-bold hover:underline">View App →</a>
+							</div>
 						</div>
-					</div>
-					<!-- Portfolio Item 3 -->
-					<div class="bg-white border-2 border-black custom-shadow">
-						<img src="/images/crime app.jpg" alt="Crime Analysis" class="w-full h-48 object-cover">
-						<div class="p-4">
-							<h3 class="font-bold mb-2">Crime Analysis using National Crime Research Center Data</h3>
-							<p class="text-gray-700">The analysis focuses on Kenya's crime data to inform the nature and types of crime committed.</p>
-							<a class="text-black font-bold hover:underline">Work In Progress →</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- New Articles Section -->
-		<section id="articles" class="bg-gray-100 py-20">
-			<div class="container mx-auto">
-				<h2 class="text-3xl font-bold mb-8 text-center">My Medium Articles</h2>
-				<p class="text-center mb-12">Explore my thoughts and insights on various topics in finance, sports analytics, and technology.</p>
-				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-					<!-- Article 1 -->
-					<div class="bg-white border-2 border-black custom-shadow">
-						<img src="images/EFT.jpeg" alt="Demystifying ETFs" class="w-full h-40 object-cover">
-						<div class="p-4">
-							<h3 class="font-bold mb-2">Demystifying ETFs</h3>
-							<p class="text-gray-700 mb-4">Exploring the definitions, types, benefits, and a case study of ETFs.</p>
-							<a href="https://medium.com/@deltaanalyticske/demystifying-etfs-a-comprehensive-guide-for-beginners-5431819e74d0" class="text-black font-bold hover:underline">Read on Medium →</a>
-						</div>
-					</div>
-					<!-- Article 2 -->
-					<div class="bg-white border-2 border-black custom-shadow">
-						<img src="images/pic04.jpg" alt="Article 2 thumbnail" class="w-full h-40 object-cover">
-						<div class="p-4">
-							<h3 class="font-bold mb-2">Data Science Basics using Bundesliga Data</h3>
-							<p class="text-gray-700 mb-4">In this piece, I explore fetching JSON data and performing Exploratory Data Analysis (EDA).</p>
-							<a href="https://medium.com/@deltaanalyticske/004-data-science-basics-using-the-2020-21-bundesliga-season-dataset-with-python-friends-5d70a351e6" class="text-black font-bold hover:underline">Read on Medium →</a>
-						</div>
-					</div>
-					<!-- Article 3 -->
-					<div class="bg-white border-2 border-black custom-shadow">
-						<img src="images/start.jpeg" alt="Article 3 thumbnail" class="w-full h-40 object-cover">
-						<div class="p-4">
-							<h3 class="font-bold mb-2">The Start of My Analysis and Research Journey</h3>
-							<p class="text-gray-700 mb-4">This is my inaugural article where I provide my background and motivations.</p>
-							<a href="https://medium.com/@deltaanalyticske/the-start-of-my-data-analytics-for-soccer-journey-2bfcdd6b20e5" class="text-black font-bold hover:underline">Read on Medium →</a>
+						<!-- Portfolio Item 3 -->
+						<div class="bg-white border-2 border-black custom-shadow">
+							<img src="/images/crime app.jpg" alt="Crime Analysis" class="w-full h-48 object-cover">
+							<div class="p-4">
+								<h3 class="font-bold mb-2">Crime Analysis: National Crime Research Center Data</h3>
+								<p class="text-gray-700">An in-depth analysis of Kenya's crime data, examining patterns and trends in criminal activity.</p>
+								<a class="text-black font-bold hover:underline">Work In Progress →</a>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="text-center mt-12">
-					<a href="https://medium.com/me/stories/public" class="bg-black text-white px-6 py-2 border-2 border-black hover:bg-white hover:text-black transition duration-300">View All Articles</a>
-				</div>
-			</div>
-		</section>
+			</section>
 
-		<!-- About Me Section -->
-		<section id="about" class="py-20">
-			<div class="container mx-auto">
-				<h2 class="text-3xl font-bold mb-8 text-center">About Me</h2>
-				<div class="flex flex-col md:flex-row items-center">
-					<img src="images/passport.jpg" alt="Dennis Seroney" class="w-64 h-64 rounded-full object-cover mb-8 md:mr-8 border-4 border-black">
-					<div>
-						<p class="text-lg mb-4">My background spans from my undergraduate degree in finance to working for the government in Finance, Audit, and Accounting departments. I have played a variety of sports since childhood and maintain a keen interest in embracing emerging technologies.</p>
-						<p class="text-lg">My diverse experience allows me to approach problems from multiple angles, providing unique insights and solutions. My skill set includes document editing using Microsoft Office 365 and Google Suite, data analysis using spreadsheets, Python, and SPSS, and presenting findings through reports, slides, and visual presentations using OBS, MS Teams, and PowerPoint video.</p>
+			<!-- Articles Section -->
+			<section id="articles" class="bg-gray-100 py-20">
+				<div class="container mx-auto">
+					<h2 class="text-3xl font-bold mb-8 text-center">Published Articles</h2>
+					<p class="text-center mb-12">Explore my insights on finance, sports analytics, and technology.</p>
+					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+						<!-- Article 1 -->
+						<div class="bg-white border-2 border-black custom-shadow">
+							<img src="images/EFT.jpeg" alt="Demystifying ETFs" class="w-full h-40 object-cover">
+							<div class="p-4">
+								<h3 class="font-bold mb-2">Demystifying ETFs</h3>
+								<p class="text-gray-700 mb-4">An in-depth exploration of Exchange-Traded Funds: definitions, types, benefits, and a practical case study.</p>
+								<a href="https://medium.com/@deltaanalyticske/demystifying-etfs-a-comprehensive-guide-for-beginners-5431819e74d0" class="text-black font-bold hover:underline">Read on Medium →</a>
+							</div>
+						</div>
+						<!-- Article 2 -->
+						<div class="bg-white border-2 border-black custom-shadow">
+							<img src="images/pic04.jpg" alt="Data Science and Bundesliga" class="w-full h-40 object-cover">
+							<div class="p-4">
+								<h3 class="font-bold mb-2">Data Science Fundamentals: Bundesliga Analysis</h3>
+								<p class="text-gray-700 mb-4">A technical exploration of JSON data retrieval and Exploratory Data Analysis (EDA) using Bundesliga statistics.</p>
+								<a href="https://medium.com/@deltaanalyticske/004-data-science-basics-using-the-2020-21-bundesliga-season-dataset-with-python-friends-5d70a351e6" class="text-black font-bold hover:underline">Read on Medium →</a>
+							</div>
+						</div>
+						<!-- Article 3 -->
+						<div class="bg-white border-2 border-black custom-shadow">
+							<img src="images/start.jpeg" alt="Research Journey Beginnings" class="w-full h-40 object-cover">
+							<div class="p-4">
+								<h3 class="font-bold mb-2">Embarking on My Research and Analysis Journey</h3>
+								<p class="text-gray-700 mb-4">An introspective piece detailing my professional background and motivations in the field of data analytics.</p>
+								<a href="https://medium.com/@deltaanalyticske/the-start-of-my-data-analytics-for-soccer-journey-2bfcdd6b20e5" class="text-black font-bold hover:underline">Read on Medium →</a>
+							</div>
+						</div>
+					</div>
+					<div class="text-center mt-12">
+						<a href="https://medium.com/me/stories/public" class="bg-black text-white px-6 py-2 border-2 border-black hover:bg-white hover:text-black transition duration-300">View All Articles</a>
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
 
-		<!-- Contact Section -->
-		<section id="contact" class="bg-gray-100 py-20">
-			<div class="container mx-auto">
-				<h2 class="text-3xl font-bold mb-8 text-center">Contact Me</h2>
-				<p class="text-center mb-8">Feel free to reach out using the form below.</p>
-				<form action="https://formspree.io/f/mvgpojvg" method="POST" class="max-w-lg mx-auto">
-					<div class="mb-4">
-						<input type="text" name="name" placeholder="Name" required class="w-full px-4 py-2 border-2 border-black focus:outline-none focus:ring-2 focus:ring-gray-500">
+			<!-- About Me Section -->
+			<section id="about" class="py-20">
+				<div class="container mx-auto">
+					<h2 class="text-3xl font-bold mb-8 text-center">About Me</h2>
+					<div class="flex flex-col md:flex-row items-center">
+						<img src="images/passport.jpg" alt="Dennis Seroney" class="w-64 h-64 rounded-full object-cover mb-8 md:mr-8 border-4 border-black">
+						<div>
+							<p class="text-lg mb-4">My professional journey began with a degree in finance and has since encompassed roles in government finance, audit, and accounting departments. Throughout my life, I've maintained an active involvement in various sports, which has cultivated a unique perspective on data analysis in athletics. Concurrently, I've developed a passionate interest in emerging technologies and their applications in finance and sports analytics.</p>
+							<p class="text-lg">This diverse background enables me to approach complex problems from multiple angles, offering innovative insights and solutions. My technical proficiencies include advanced document preparation using Microsoft Office 365 and Google Suite, data analysis utilizing spreadsheets, Python, and SPSS, and creating impactful presentations through various mediums including reports, slides, and multimedia presentations using OBS, MS Teams, and PowerPoint.</p>
+						</div>
 					</div>
-					<div class="mb-4">
-						<input type="email" name="_replyto" placeholder="Your Email" required class="w-full px-4 py-2 border-2 border-black focus:outline-none focus:ring-2 focus:ring-gray-500">
-					</div>
-					<div class="mb-4">
-						<textarea name="message" placeholder="Message" rows="4" required class="w-full px-4 py-2 border-2 border-black focus:outline-none focus:ring-2 focus:ring-gray-500"></textarea>
-					</div>
-					<input type="hidden" name="_subject" value="New contact form submission">
-					<button type="submit" class="w-full bg-black text-white py-2 border-2 border-black hover:bg-white hover:text-black transition duration-300">Send Message</button>
-				</form>
-			</div>
-		</section>
+				</div>
+			</section>
 
-	<footer class="bg-black text-white py-8">
-		<div class="container mx-auto text-center">
-			<div class="flex justify-center space-x-4 mb-4">
-				<a href="https://x.com/Analytics_KE" target="_blank" rel="noopener noreferrer" class="hover:text-gray-300">
-					<i class="fab fa-twitter"></i>
-				</a>
-				<a href="https://github.com/analyticsKE" target="_blank" rel="noopener noreferrer" class="hover:text-gray-300">
-					<i class="fab fa-github"></i>
-				</a>
-				<a href="https://medium.com/@deltaanalyticske" target="_blank" rel="noopener noreferrer" class="hover:text-gray-300">
-					<i class="fab fa-medium"></i>
-				</a>
-				<a href="mailto:deltaanalyticske@gmail.com" class="hover:text-gray-300">
-					<i class="fas fa-envelope"></i>
-				</a>
-			</div>
-			<p>&copy; 2024 Dennis Seroney. All rights reserved.</p>
-		</div>
-	</footer>
+			<!-- Contact Section -->
+			<section id="contact" class="bg-gray-100 py-20">
+				<div class="container mx-auto">
+					<h2 class="text-3xl font-bold mb-8 text-center">Contact Me</h2>
+					<p class="text-center mb-8">I welcome your inquiries. Please use the form below to get in touch.</p>
+					<form action="https://formspree.io/f/mvgpojvg" method="POST" class="max-w-lg mx-auto">
+						<div class="mb-4">
+							<input type="text" name="name" placeholder="Name" required class="w-full px-4 py-2 border-2 border-black focus:outline-none focus:ring-2 focus:ring-gray-500">
+						</div>
+						<div class="mb-4">
+							<input type="email" name="_replyto" placeholder="Your Email" required class="w-full px-4 py-2 border-2 border-black focus:outline-none focus:ring-2 focus:ring-gray-500">
+						</div>
+						<div class="mb-4">
+							<textarea name="message" placeholder="Message" rows="4" required class="w-full px-4 py-2 border-2 border-black focus:outline-none focus:ring-2 focus:ring-gray-500"></textarea>
+						</div>
+						<input type="hidden" name="_subject" value="New contact form submission">
+						<button type="submit" class="w-full bg-black text-white py-2 border-2 border-black hover:bg-white hover:text-black transition duration-300">Send Message</button>
+					</form>
+				</div>
+			</section>
+		</main>
 
-	<!-- Scripts -->
-	<script src="https://kit.fontawesome.com/your-fontawesome-kit.js"></script>
-	<script>
-		// Add any custom JavaScript here
-	</script>
-</body>
+		<footer class="bg-black text-white py-8">
+			<div class="container mx-auto text-center">
+				<div class="flex justify-center space-x-4 mb-4">
+					<a href="https://x.com/Analytics_KE" target="_blank" rel="noopener noreferrer" class="hover:text-gray-300">
+						<i class="fab fa-twitter"></i>
+					</a>
+					<a href="https://github.com/analyticsKE" target="_blank" rel="noopener noreferrer" class="hover:text-gray-300">
+						<i class="fab fa-github"></i>
+					</a>
+					<a href="https://medium.com/@deltaanalyticske" target="_blank" rel="noopener noreferrer" class="hover:text-gray-300">
+						<i class="fab fa-medium"></i>
+					</a>
+					<a href="mailto:deltaanalyticske@gmail.com" class="hover:text-gray-300">
+						<i
