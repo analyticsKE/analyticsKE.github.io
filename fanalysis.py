@@ -86,7 +86,7 @@ else:
     """)
     fig_revenue = go.Figure()
     for company, data in all_data.items():
-        fig_revenue.add_trace(go.Scatter(x=data.columns, y=data.loc['Revenue'], name=company, mode='lines+markers'))
+        fig_revenue.add_trace(go.Scatter(x=data.index, y=data['Revenue'], name=company, mode='lines+markers'))
     fig_revenue.update_layout(title="Revenue Growth (2019-2023)", xaxis_title="Year", yaxis_title="Revenue ($)")
     fig_revenue = configure_xaxis(fig_revenue)
     st.plotly_chart(fig_revenue, use_container_width=True)
