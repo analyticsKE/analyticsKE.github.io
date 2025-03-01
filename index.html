@@ -67,6 +67,24 @@
             font-weight: 600;
             transition: color 0.3s ease;
         }
+        /* Ensure navigation links are evenly spaced and centered */
+        nav .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        nav .social-links {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        /* Hero section spacing */
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
     </style>
 </head>
 <body class="text-gray-100">
@@ -82,12 +100,14 @@
                     </div>
                 </div>
                 <nav class="flex items-center space-x-6">
-                    <a href="cv.html" class="hover:text-blue-400">CV</a>
-                    <a href="#portfolio" class="hover:text-blue-400">Portfolio</a>
-                    <a href="#articles" class="hover:text-blue-400">Articles</a>
-                    <a href="#about" class="hover:text-blue-400">About Me</a>
-                    <a href="#contact" class="hover:text-blue-400">Contact</a>
-                    <div class="flex space-x-4">
+                    <div class="nav-links">
+                        <a href="cv.html" class="hover:text-blue-400">CV</a>
+                        <a href="#portfolio" class="hover:text-blue-400">Portfolio</a>
+                        <a href="#articles" class="hover:text-blue-400">Articles</a>
+                        <a href="#about" class="hover:text-blue-400">About Me</a>
+                        <a href="#contact" class="hover:text-blue-400">Contact</a>
+                    </div>
+                    <div class="social-links">
                         <a href="https://x.com/Analytics_KE" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition" aria-label="Twitter">
                             <i class="fab fa-twitter"></i>
                         </a>
@@ -111,7 +131,7 @@
         <!-- Intro Section -->
         <section id="top" class="pitch-line section-spacing text-center relative">
             <div class="container mx-auto px-6">
-                <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
+                <motion.div class="hero-content" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
                     <h2 class="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight">
                         Welcome to My Portfolio
                     </h2>
@@ -162,17 +182,6 @@
                             </div>
                         </div>
                     </motion.div>
-                    <!-- Portfolio Item 4: Champions League Dashboard -->
-                    <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }}>
-                        <div class="bg-gray-800 rounded-lg custom-shadow border border-gray-700 overflow-hidden">
-                            <img src="images/champions_league_dashboard.jpg" alt="Champions League Dashboard" class="w-full h-48 object-cover">
-                            <div class="p-6">
-                                <h3 class="font-bold text-xl mb-2">Champions League 2024-25 Dashboard</h3>
-                                <p class="text-gray-300 mb-4">Analytics for the 2024-25 season with FBref and Transfermarkt data.</p>
-                                <a href="https://dennis-champions-league-2024-25.streamlit.app" class="text-blue-400 font-semibold hover:underline">View App →</a>
-                            </div>
-                        </div>
-                    </motion.div>
                 </div>
             </div>
         </section>
@@ -213,17 +222,6 @@
                                 <h3 class="font-bold text-xl mb-2">My Research Journey</h3>
                                 <p class="text-gray-300 mb-4">My background and motivations in data analytics.</p>
                                 <a href="https://medium.com/@deltaanalyticske/the-start-of-my-data-analytics-for-soccer-journey-2bfcdd6b20e5" class="text-blue-400 font-semibold hover:underline">Read on Medium →</a>
-                            </div>
-                        </div>
-                    </motion.div>
-                    <!-- Article 4: Champions League Dashboard -->
-                    <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }}>
-                        <div class="bg-gray-700 rounded-lg custom-shadow border border-gray-600 overflow-hidden">
-                            <img src="images/champions_league_article.jpg" alt="Champions League Dashboard Article" class="w-full h-40 object-cover">
-                            <div class="p-6">
-                                <h3 class="font-bold text-xl mb-2">Champions League 2024-25 Dashboard</h3>
-                                <p class="text-gray-300 mb-4">Building a soccer analytics dashboard with FBref and Transfermarkt.</p>
-                                <a href="YOUR_MEDIUM_ARTICLE_URL" class="text-blue-400 font-semibold hover:underline">Read on Medium →</a>
                             </div>
                         </div>
                     </motion.div>
