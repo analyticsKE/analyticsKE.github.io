@@ -1,306 +1,215 @@
 <!DOCTYPE HTML>
 <html lang="en">
-<head>
-    <title>Dennis Seroney - Researcher and Analyst</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <meta name="description" content="Dennis Seroney's personal website - Researcher and Analyst specializing in Finance, Sports, and Technology">
-    <link href="https://cdn.jsdelivr.com/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <script src="https://unpkg.com/framer-motion@6.5.1/dist/framer-motion.js"></script>
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #1a1a1a 0%, #2c3e50 100%);
-            color: #e5e7eb;
-            min-height: 100vh;
-        }
-        .glass-effect {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .pitch-line {
-            position: relative;
-            overflow: hidden;
-        }
-        .pitch-line::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: repeating-linear-gradient(
-                to bottom,
-                transparent,
-                transparent 10px,
-                rgba(255, 255, 255, 0.1) 10px,
-                rgba(255, 255, 255, 0.1) 20px
-            );
-            opacity: 0.3;
-        }
-        .custom-shadow {
-            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .custom-shadow:hover {
-            transform: translateY(-5px);
-            box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.5);
-        }
-        .highlight {
-            background: linear-gradient(90deg, #3b82f6, #60a5fa);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .section-spacing {
-            padding-top: 6rem;
-            padding-bottom: 6rem;
-        }
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        nav a {
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
-        /* Ensure navigation links are evenly spaced and centered */
-        nav .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-        }
-        nav .social-links {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-        /* Hero section spacing */
-        .hero-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 2rem;
-        }
-    </style>
-</head>
-<body class="text-gray-100">
-    <!-- Header -->
-    <header class="glass-effect fixed w-full z-10 top-0">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex justify-between items-center">
-                <div class="flex items-center">
-                    <img src="images/delta.png" alt="Dennis Seroney" class="w-12 h-12 rounded-full mr-4 border-2 border-gray-600">
-                    <div>
-                        <h1 class="text-2xl font-bold">Dennis Seroney</h1>
-                        <p class="text-sm opacity-75">Researcher & Analyst</p>
-                    </div>
-                </div>
-                <nav class="flex items-center space-x-6">
-                    <div class="nav-links">
-                        <a href="cv.html" class="hover:text-blue-400">CV</a>
-                        <a href="#portfolio" class="hover:text-blue-400">Portfolio</a>
-                        <a href="#articles" class="hover:text-blue-400">Articles</a>
-                        <a href="#about" class="hover:text-blue-400">About Me</a>
-                        <a href="#contact" class="hover:text-blue-400">Contact</a>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://x.com/Analytics_KE" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition" aria-label="Twitter">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="https://github.com/analyticsKE" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition" aria-label="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://medium.com/@deltaanalyticske" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition" aria-label="Medium">
-                            <i class="fab fa-medium"></i>
-                        </a>
-                        <a href="mailto:deltaanalytics@gmail.com" class="hover:text-blue-400 transition" aria-label="Email">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </header>
+	<head>
+		<title>Dennis Seroney - Researcher and Analyst</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Dennis Seroney's personal website - Researcher and Analyst specializing in Finance, Sports, and Technology">
+		<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Commit+Mono:wght@400;700&display=swap" rel="stylesheet">
+		<style>
+			body {
+				font-family: 'Commit Mono', monospace;
+			}
+			.custom-shadow {
+				box-shadow: 5px 5px 0px 0px rgba(0,0,0,1);
+			}
+			.animate-background {
+				background: linear-gradient(-45deg, #09000a4a, #363234, #28292a, #400b66);
+				background-size: 400% 400%;
+				animation: gradient 15s ease infinite;
+			}
+			@keyframes gradient {
+				0% {
+					background-position: 0% 50%;
+				}
+				50% {
+					background-position: 100% 50%;
+				}
+				100% {
+					background-position: 0% 50%;
+				}
+			}
+		</style>
+		<!-- Add Font Awesome for icons -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	</head>
+	<body class="bg-white text-black">
+		<!-- Header -->
+		<header class="bg-black text-white p-4 fixed w-full z-10">
+			<div class="container mx-auto">
+				<div class="flex flex-col md:flex-row justify-between items-center">
+					<div class="flex items-center mb-4 md:mb-0">
+						<img src="images/delta.png" alt="Dennis Seroney" class="w-12 h-12 rounded-full mr-4">
+						<div>
+							<h1 class="text-2xl font-bold">Dennis Seroney</h1>
+							<p class="text-sm">Researcher and Analyst</p>
+						</div>
+					</div>
+					<nav class="w-full md:w-auto">
+						<ul class="flex flex-wrap justify-center md:justify-end space-x-4 mb-4 md:mb-0">
+							<li><a href="cv.html" class="hover:text-gray-300">CV</a></li>
+							<li><a href="#portfolio" class="hover:text-gray-300">Portfolio</a></li>
+							<li><a href="#articles" class="hover:text-gray-300">Articles</a></li>
+							<li><a href="#about" class="hover:text-gray-300">About Me</a></li>
+							<li><a href="#contact" class="hover:text-gray-300">Contact</a></li>
+						</ul>
+						<div class="flex justify-center md:justify-end space-x-4">
+							<a href="https://x.com/Analytics_KE" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-300" aria-label="Twitter">
+								<i class="fab fa-twitter"></i>
+							</a>
+							<a href="https://github.com/analyticsKE" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-300" aria-label="GitHub">
+								<i class="fab fa-github"></i>
+							</a>
+							<a href="https://medium.com/@deltaanalyticske" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-300" aria-label="Medium">
+								<i class="fab fa-medium"></i>
+							</a>
+							<a href="mailto:deltaanalytics@gmail.com" class="text-white hover:text-gray-300" aria-label="Email">
+								<i class="fas fa-envelope"></i>
+							</a>
+							<a href="cv.html" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-300" aria-label="View CV">
+								<i class="fas fa-file-alt"></i>
+							</a>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<!-- Main Content -->
+		<main class="pt-24">
+			<!-- Intro Section with Animation -->
+			<section id="top" class="animate-background text-white py-20">
+				<div class="container mx-auto text-center">
+					<h2 class="text-4xl font-bold mb-4">Welcome to My Portfolio</h2>
+					<p class="text-xl mb-8">I'm <strong>Dennis Seroney</strong>, a researcher and analyst specializing in Finance, Sports, and Technology.</p>
+					<a href="#contact" class="bg-white text-black px-6 py-2 border-2 border-white hover:bg-black hover:text-white transition duration-300">Contact Me</a>
+				</div>
+			</section>
 
-    <!-- Main Content -->
-    <main class="pt-24">
-        <!-- Intro Section -->
-        <section id="top" class="pitch-line section-spacing text-center relative">
-            <div class="container mx-auto px-6">
-                <motion.div class="hero-content" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-                    <h2 class="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight">
-                        Welcome to My Portfolio
-                    </h2>
-                    <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
-                        I’m <strong>Dennis Seroney</strong>, a researcher and analyst specializing in <span class="highlight">Finance, Sports, and Technology</span>.
-                    </p>
-                    <a href="#contact" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition font-semibold">Contact Me</a>
-                </motion.div>
-            </div>
-        </section>
+			<!-- Portfolio Section -->
+			<section id="portfolio" class="py-20">
+				<div class="container mx-auto">
+					<h2 class="text-3xl font-bold mb-8 text-center">Portfolio</h2>
+					<p class="text-center mb-12">My professional experience encompasses roles in Finance, Internal Audit, and Accounting departments.</p>
+					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+						<!-- Portfolio Item 1 -->
+						<div class="bg-white border-2 border-black custom-shadow">
+							<img src="images/fs_dashboard.png" alt="Financial Analysis Project" class="w-full h-48 object-cover">
+							<div class="p-4">
+								<h3 class="font-bold mb-2">Financial Analysis Project</h3>
+								<p class="text-gray-700 mb-4">Conducted a comprehensive analysis of company financials, providing strategic insights for decision-making.</p>
+								<a href="financial-analysis-project.html" class="text-black font-bold hover:underline">View Report →</a>
+							</div>
+						</div>
+						<!-- Portfolio Item 2 -->
+						<div class="bg-white border-2 border-black custom-shadow">
+							<img src="images/soccerdash.png" alt="Soccer Analytics Dashboard" class="w-full h-48 object-cover">
+							<div class="p-4">
+								<h3 class="font-bold mb-2">Sports Analytics Dashboard</h3>
+								<p class="text-gray-700">Developed an advanced dashboard for performance analysis of the top 5 European soccer leagues.</p>
+								<a href="https://europebig5.streamlit.app/" class="text-black font-bold hover:underline">View App →</a>
+							</div>
+						</div>
+						<!-- Portfolio Item 3 -->
+						<div class="bg-white border-2 border-black custom-shadow">
+							<img src="/images/crime app.jpg" alt="Crime Analysis" class="w-full h-48 object-cover">
+							<div class="p-4">
+								<h3 class="font-bold mb-2">Crime Analysis: National Crime Research Center Data</h3>
+								<p class="text-gray-700">An in-depth analysis of Kenya's crime data, examining patterns and trends in criminal activity.</p>
+								<a class="text-black font-bold hover:underline">Work In Progress →</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 
-        <!-- Portfolio Section -->
-        <section id="portfolio" class="section-spacing">
-            <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-bold mb-12 text-center">Portfolio</h2>
-                <p class="text-center mb-16 text-lg opacity-75">My professional experience spans Finance, Internal Audit, and Accounting.</p>
-                <div class="card-grid">
-                    <!-- Portfolio Item 1 -->
-                    <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-                        <div class="bg-gray-800 rounded-lg custom-shadow border border-gray-700 overflow-hidden">
-                            <img src="images/fs_dashboard.png" alt="Financial Analysis Project" class="w-full h-48 object-cover">
-                            <div class="p-6">
-                                <h3 class="font-bold text-xl mb-2">Financial Analysis Project</h3>
-                                <p class="text-gray-300 mb-4">Deep dive into company financials for strategic insights.</p>
-                                <a href="financial-analysis-project.html" class="text-blue-400 font-semibold hover:underline">View Report →</a>
-                            </div>
-                        </div>
-                    </motion.div>
-                    <!-- Portfolio Item 2 -->
-                    <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }}>
-                        <div class="bg-gray-800 rounded-lg custom-shadow border border-gray-700 overflow-hidden">
-                            <img src="images/soccerdash.png" alt="Soccer Analytics Dashboard" class="w-full h-48 object-cover">
-                            <div class="p-6">
-                                <h3 class="font-bold text-xl mb-2">Sports Analytics Dashboard</h3>
-                                <p class="text-gray-300 mb-4">Performance analysis for Europe’s top 5 soccer leagues.</p>
-                                <a href="https://europebig5.streamlit.app/" class="text-blue-400 font-semibold hover:underline">View App →</a>
-                            </div>
-                        </div>
-                    </motion.div>
-                    <!-- Portfolio Item 3 -->
-                    <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}>
-                        <div class="bg-gray-800 rounded-lg custom-shadow border border-gray-700 overflow-hidden">
-                            <img src="images/crime app.jpg" alt="Crime Analysis" class="w-full h-48 object-cover">
-                            <div class="p-6">
-                                <h3 class="font-bold text-xl mb-2">Crime Analysis: Kenya Data</h3>
-                                <p class="text-gray-300 mb-4">Trends and patterns in Kenya’s crime data.</p>
-                                <a class="text-blue-400 font-semibold hover:underline">Work In Progress →</a>
-                            </div>
-                        </div>
-                    </motion.div>
-                </div>
-            </div>
-        </section>
+			<!-- Articles Section -->
+			<section id="articles" class="bg-gray-100 py-20">
+				<div class="container mx-auto">
+					<h2 class="text-3xl font-bold mb-8 text-center">Published Articles</h2>
+					<p class="text-center mb-12">Explore my insights on finance, sports analytics, and technology.</p>
+					<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+						<!-- Article 1 -->
+						<div class="bg-white border-2 border-black custom-shadow">
+							<img src="images/EFT.jpeg" alt="Demystifying ETFs" class="w-full h-40 object-cover">
+							<div class="p-4">
+								<h3 class="font-bold mb-2">Demystifying ETFs</h3>
+								<p class="text-gray-700 mb-4">An in-depth exploration of Exchange-Traded Funds: definitions, types, benefits, and a practical case study.</p>
+								<a href="https://medium.com/@deltaanalyticske/demystifying-etfs-a-comprehensive-guide-for-beginners-5431819e74d0" class="text-black font-bold hover:underline">Read on Medium →</a>
+							</div>
+						</div>
+						<!-- Article 2 -->
+						<div class="bg-white border-2 border-black custom-shadow">
+							<img src="images/pic04.jpg" alt="Data Science and Bundesliga" class="w-full h-40 object-cover">
+							<div class="p-4">
+								<h3 class="font-bold mb-2">Data Science Fundamentals: Bundesliga Analysis</h3>
+								<p class="text-gray-700 mb-4">A technical exploration of JSON data retrieval and Exploratory Data Analysis (EDA) using Bundesliga statistics.</p>
+								<a href="https://medium.com/@deltaanalyticske/004-data-science-basics-using-the-2020-21-bundesliga-season-dataset-with-python-friends-5d70a351e6" class="text-black font-bold hover:underline">Read on Medium →</a>
+							</div>
+						</div>
+						<!-- Article 3 -->
+						<div class="bg-white border-2 border-black custom-shadow">
+							<img src="images/start.jpeg" alt="Research Journey Beginnings" class="w-full h-40 object-cover">
+							<div class="p-4">
+								<h3 class="font-bold mb-2">Embarking on My Research and Analysis Journey</h3>
+								<p class="text-gray-700 mb-4">An introspective piece detailing my professional background and motivations in the field of data analytics.</p>
+								<a href="https://medium.com/@deltaanalyticske/the-start-of-my-data-analytics-for-soccer-journey-2bfcdd6b20e5" class="text-black font-bold hover:underline">Read on Medium →</a>
+							</div>
+						</div>
+					</div>
+					<div class="text-center mt-12">
+						<a href="https://medium.com/me/stories/public" class="bg-black text-white px-6 py-2 border-2 border-black hover:bg-white hover:text-black transition duration-300">View All Articles</a>
+					</div>
+				</div>
+			</section>
 
-        <!-- Articles Section -->
-        <section id="articles" class="section-spacing bg-gray-800">
-            <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-bold mb-12 text-center">Published Articles</h2>
-                <p class="text-center mb-16 text-lg opacity-75">Sharing knowledge on finance, soccer, and tech.</p>
-                <div class="card-grid">
-                    <!-- Article 1 -->
-                    <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-                        <div class="bg-gray-700 rounded-lg custom-shadow border border-gray-600 overflow-hidden">
-                            <img src="images/EFT.jpeg" alt="Demystifying ETFs" class="w-full h-40 object-cover">
-                            <div class="p-6">
-                                <h3 class="font-bold text-xl mb-2">Demystifying ETFs</h3>
-                                <p class="text-gray-300 mb-4">An in-depth exploration of Exchange-Traded Funds with a case study.</p>
-                                <a href="https://medium.com/@deltaanalyticske/demystifying-etfs-a-comprehensive-guide-for-beginners-5431819e74d0" class="text-blue-400 font-semibold hover:underline">Read on Medium →</a>
-                            </div>
-                        </div>
-                    </motion.div>
-                    <!-- Article 2 -->
-                    <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }}>
-                        <div class="bg-gray-700 rounded-lg custom-shadow border border-gray-600 overflow-hidden">
-                            <img src="images/pic04.jpg" alt="Data Science and Bundesliga" class="w-full h-40 object-cover">
-                            <div class="p-6">
-                                <h3 class="font-bold text-xl mb-2">Data Science: Bundesliga Analysis</h3>
-                                <p class="text-gray-300 mb-4">JSON data retrieval and EDA using Bundesliga stats.</p>
-                                <a href="https://medium.com/@deltaanalyticske/004-data-science-basics-using-the-2020-21-bundesliga-season-dataset-with-python-friends-5d70a351e6" class="text-blue-400 font-semibold hover:underline">Read on Medium →</a>
-                            </div>
-                        </div>
-                    </motion.div>
-                    <!-- Article 3 -->
-                    <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}>
-                        <div class="bg-gray-700 rounded-lg custom-shadow border border-gray-600 overflow-hidden">
-                            <img src="images/start.jpeg" alt="Research Journey Beginnings" class="w-full h-40 object-cover">
-                            <div class="p-6">
-                                <h3 class="font-bold text-xl mb-2">My Research Journey</h3>
-                                <p class="text-gray-300 mb-4">My background and motivations in data analytics.</p>
-                                <a href="https://medium.com/@deltaanalyticske/the-start-of-my-data-analytics-for-soccer-journey-2bfcdd6b20e5" class="text-blue-400 font-semibold hover:underline">Read on Medium →</a>
-                            </div>
-                        </div>
-                    </motion.div>
-                </div>
-                <div class="text-center mt-12">
-                    <a href="https://medium.com/@deltaanalyticske" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition font-semibold">View All Articles</a>
-                </div>
-            </div>
-        </section>
+			<!-- About Me Section -->
+			<section id="about" class="py-20">
+				<div class="container mx-auto">
+					<h2 class="text-3xl font-bold mb-8 text-center">About Me</h2>
+					<div class="flex flex-col md:flex-row items-center">
+						<img src="images/passport.jpg" alt="Dennis Seroney" class="w-64 h-64 rounded-full object-cover mb-8 md:mr-8 border-4 border-black">
+						<div>
+							<p class="text-lg mb-4">My professional journey began with a degree in finance and has since encompassed roles in government finance, audit, and accounting departments. Throughout my life, I've maintained an active involvement in various sports, which has cultivated a unique perspective on data analysis in athletics. Concurrently, I've developed a passionate interest in emerging technologies and their applications in finance and sports analytics.</p>
+							<p class="text-lg">This diverse background enables me to approach complex problems from multiple angles, offering innovative insights and solutions. My technical proficiencies include advanced document preparation using Microsoft Office 365 and Google Suite, data analysis utilizing spreadsheets, Python, and SPSS, and creating impactful presentations through various mediums including reports, slides, and multimedia presentations using OBS, MS Teams, and PowerPoint.</p>
+						</div>
+					</div>
+				</div>
+			</section>
 
-        <!-- About Me Section -->
-        <section id="about" class="section-spacing">
-            <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-bold mb-12 text-center">About Me</h2>
-                <div class="flex flex-col lg:flex-row items-center gap-12">
-                    <motion.img
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.5 }}
-                        src="images/passport.jpg"
-                        alt="Dennis Seroney"
-                        class="w-64 h-64 rounded-full object-cover border-4 border-gray-600"
-                    />
-                    <div class="flex-1">
-                        <p class="text-lg mb-4 opacity-75">I kicked off my journey with a finance degree, diving into roles in government finance, audit, and accounting. A lifelong sports lover—especially soccer—I’ve blended my passion for the game with data analytics, focusing on performance insights.</p>
-                        <p class="text-lg opacity-75">I’m also hooked on emerging tech, wielding tools like Python, SPSS, MS Office 365, and Google Suite to uncover insights. Whether it’s crafting reports, slides, or multimedia presentations (OBS, MS Teams, PowerPoint), I’m all about turning data into impact.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+			<!-- Contact Section -->
+			<section id="contact" class="bg-gray-100 py-20">
+				<div class="container mx-auto">
+					<h2 class="text-3xl font-bold mb-8 text-center">Contact Me</h2>
+					<p class="text-center mb-8">I welcome your inquiries. Please use the form below to get in touch.</p>
+					<form action="https://formspree.io/f/mvgpojvg" method="POST" class="max-w-lg mx-auto">
+						<div class="mb-4">
+							<input type="text" name="name" placeholder="Name" required class="w-full px-4 py-2 border-2 border-black focus:outline-none focus:ring-2 focus:ring-gray-500">
+						</div>
+						<div class="mb-4">
+							<input type="email" name="_replyto" placeholder="Your Mail" required class="w-full px-4 py-2 border-2 border-black focus:outline-none focus:ring-2 focus:ring-gray-500">
+						</div>
+						<div class="mb-4">
+							<textarea name="message" placeholder="Message" rows="4" required class="w-full px-4 py-2 border-2 border-black focus:outline-none focus:ring-2 focus:ring-gray-500"></textarea>
+						</div>
+						<input type="hidden" name="_subject" value="New contact form submission">
+						<button type="submit" class="w-full bg-black text-white py-2 border-2 border-black hover:bg-white hover:text-black transition duration-300">Send Message</button>
+					</form>
+				</div>
+			</section>
+		</main>
 
-        <!-- Contact Section -->
-        <section id="contact" class="section-spacing bg-gray-800">
-            <div class="container mx-auto px-6">
-                <h2 class="text-4xl font-bold mb-12 text-center">Contact Me</h2>
-                <p class="text-center mb-12 text-lg opacity-75">I’m open to inquiries—drop me a message.</p>
-                <form action="https://formspree.io/f/mvgpojvg" method="POST" class="max-w-lg mx-auto space-y-6">
-                    <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }}>
-                        <input type="text" name="name" placeholder="Name" required class="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-100">
-                    </motion.div>
-                    <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 0.1 }}>
-                        <input type="email" name="_replyto" placeholder="Your Email" required class="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-100">
-                    </motion.div>
-                    <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 0.2 }}>
-                        <textarea name="message" placeholder="Message" rows="4" required class="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-100"></textarea>
-                    </motion.div>
-                    <input type="hidden" name="_subject" value="New contact form submission">
-                    <motion.button
-                        type="submit"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition font-semibold"
-                    >
-                        Send Message
-                    </motion.button>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 py-8">
-        <div class="container mx-auto px-6 text-center">
-            <div class="flex justify-center space-x-4 mb-4">
-                <a href="https://x.com/Analytics_KE" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="https://github.com/analyticsKE" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://medium.com/@deltaanalyticske" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition">
-                    <i class="fab fa-medium"></i>
-                </a>
-                <a href="mailto:deltaanalytics@gmail.com" class="hover:text-blue-400 transition">
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
-            <p>© 2025 Dennis Seroney. All rights reserved.</p>
-        </div>
-    </footer>
-</body>
-</html>
+		<footer class="bg-black text-white py-8">
+			<div class="container mx-auto text-center">
+				<div class="flex justify-center space-x-4 mb-4">
+					<a href="https://x.com/Analytics_KE" target="_blank" rel="noopener noreferrer" class="hover:text-gray-300">
+						<i class="fab fa-twitter"></i>
+					</a>
+					<a href="https://github.com/analyticsKE" target="_blank" rel="noopener noreferrer" class="hover:text-gray-300">
+						<i class="fab fa-github"></i>
+					</a>
+					<a href="https://medium.com/@deltaanalyticske" target="_blank" rel="noopener noreferrer" class="hover:text-gray-300">
+						<i class="fab fa-medium"></i>
+					</a>
+					<a href="mailto:deltaanalyticske@gmail.com" class="hover:text-gray-300">
+						<i
